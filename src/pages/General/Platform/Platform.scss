@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+.platform {
+	padding: 100px 0;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__items {
+		margin-top: 88px;
+		display: flex;
+		justify-content: center;
+		gap: 31px;
+	}
+
+	&__item {
+		max-width: 380px;
+		max-height: 357px;
+		padding: 26px 48px 48px 48px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: #ffffff;
+		box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.25);
+		border-radius: 30px;
+	}
+
+	&__title {
+		margin-top: 40px;
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $main-color;
+	}
+
+	&__descriptions {
+		margin-top: 24px;
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 130%;
+		text-align: center;
+		letter-spacing: 0.04em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $main-color;
+	}
+
+	&__name-block {
+		font-family: 'Mr. Amazin';
+		max-width: 810px;
+		font-size: 40px;
+	}
+}

@@ -1,0 +1,91 @@
+@import '../../../styles/variables';
+@import '../../../styles/animate';
+
+.create-it {
+	position: relative;
+	//background: url('image/lines.png') center/contain repeat;
+	// linear-gradient(90deg, #121212 50%, rgba(18, 18, 18, 0) 99.95%), $main-color;
+
+	background-color: $main-color;
+	background-blend-mode: screen;
+	padding: 120px 0 100px 0;
+
+	&__title {
+		margin-bottom: 40px;
+		animation: slideBottom 1s ease forwards;
+	}
+
+	&__text {
+		margin-top: 40px;
+		p {
+			font-family: 'ReSquare';
+			font-weight: 700;
+			font-size: 26px;
+			line-height: 133.5%;
+			text-transform: uppercase;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #ffffff;
+			display: flex;
+			align-items: center;
+		}
+
+		span {
+			display: inline-block;
+			width: 63px;
+			height: 21px;
+			background: #ffffff;
+
+			&:nth-child(1) {
+				margin-right: 13px;
+			}
+
+			&:nth-child(2) {
+				margin-left: 13px;
+			}
+		}
+	}
+
+	&__sub {
+		animation: slideLeft 1s ease forwards;
+	}
+
+	&__description {
+		max-width: 770px;
+	}
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+	}
+
+	&__image {
+		// background-color: rgba(50, 224, 196, 0.1);
+		background: radial-gradient(
+			circle at 50% 50%,
+			$sub-color 0%,
+			rgba(18, 18, 18, 0) 65%
+		);
+		border-radius: 50%;
+		height: 564px;
+		width: 564px;
+		position: absolute;
+		right: -10%;
+		top: -40px;
+		opacity: 0;
+		animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+		animation-delay: 2s, 3s;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			height: 464px;
+			width: 464px;
+			object-fit: contain;
+			// backdrop-filter: blur(83px);
+		}
+	}
+}

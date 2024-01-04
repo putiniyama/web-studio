@@ -1,0 +1,274 @@
+@import '../../../styles/variables';
+
+.steps {
+	padding-top: 69px;
+	background-color: $main-color;
+	position: relative;
+	//padding-bottom: 707px;
+	// overflow: hidden;
+
+	&__wrapper {
+		position: relative;
+		// display: flex;
+		// justify-content: space-between;
+	}
+
+	&__descriptions {
+		max-width: 474px;
+	}
+
+	h3 {
+		font-family: 'Mr. Amazin';
+		color: #ffffff;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-align: start;
+		margin-bottom: 82px;
+	}
+	&__items {
+		position: absolute;
+		right: 750px;
+		top: 0;
+		right: 0;
+		display: flex;
+		gap: 90px;
+		flex-direction: column;
+		align-items: end;
+	}
+
+	&__item {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 32px 32px 32px 40px;
+		gap: 24px;
+		width: 585px;
+		height: 312px;
+		background: rgba(18, 18, 18, 1);
+		border: 2px solid $sub-color;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 30px;
+		gap: 24px;
+		// transform: rotate(-3deg);
+		//opacity: 1;
+		z-index: 2;
+		transition: all 0.5s ease;
+
+		&-0 {
+			transform: rotate(0deg);
+			&.active {
+				transform: rotate(-3deg);
+			}
+		}
+
+		&-1 {
+			transform: rotate(0deg);
+			&.active {
+				transform: rotate(3deg);
+			}
+		}
+
+		&-2 {
+			transform: rotate(0deg);
+			&.active {
+				transform: rotate(3deg);
+			}
+		}
+
+		&-3 {
+			transform: rotate(0deg);
+			&.active {
+				transform: rotate(-3deg);
+			}
+		}
+
+		&-4 {
+			transform: rotate(0deg);
+			&.active {
+				transform: rotate(3deg);
+			}
+		}
+
+		&-5 {
+			transform: rotate(0deg);
+			&.active {
+				transform: rotate(-3deg);
+			}
+		}
+	}
+
+	&__bg {
+		content: '';
+		position: absolute;
+		width: 585px;
+		height: 312px;
+		border: 2px solid $sub-color;
+		border-radius: 30px;
+		background: rgba(18, 18, 18, 1);
+		right: 0;
+		z-index: 0;
+		box-shadow: -5px -6px 20px rgba(50, 224, 196, 0.25),
+			5px 6px 20px rgba(50, 224, 196, 0.25);
+		border-radius: 30px;
+		transition: all 0.5s ease;
+
+		&-0 {
+			transform: rotate(6deg);
+			&.active {
+				transform: rotate(3deg);
+			}
+		}
+
+		&-1 {
+			transform: rotate(-6deg);
+			top: 100px;
+			&.active {
+				top: 400px;
+				transform: rotate(-3deg);
+			}
+		}
+
+		&-2 {
+			transform: rotate(6deg);
+			top: 200px;
+			&.active {
+				top: 800px;
+				transform: rotate(-3deg);
+			}
+		}
+
+		&-3 {
+			transform: rotate(-6deg);
+			top: 300px;
+			&.active {
+				top: 1200px;
+				transform: rotate(3deg);
+			}
+		}
+
+		&-4 {
+			transform: rotate(6deg);
+			top: 400px;
+			&.active {
+				top: 1600px;
+				transform: rotate(-3deg);
+			}
+		}
+
+		&-5 {
+			transform: rotate(-6deg);
+			top: 500px;
+			&.active {
+				top: 2000px;
+				transform: rotate(3deg);
+			}
+		}
+	}
+
+	&__number {
+		font-family: 'Mr. Amazin';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 60px;
+		display: flex;
+		align-items: flex-end;
+		letter-spacing: 0.06em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		text-shadow: -1px -1px 0 #e6e6e6, 1px -1px 0 #e6e6e6, -1px 1px 0 #e6e6e6,
+			1px 1px 0 #e6e6e6;
+	}
+
+	&__title {
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 26px;
+		line-height: 31px;
+		display: flex;
+		align-items: flex-end;
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #e6e6e6;
+	}
+
+	&__text {
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		display: flex;
+		align-items: flex-end;
+		letter-spacing: 0.04em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: #ffffff;
+	}
+
+	&__line {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		height: 90px;
+		left: 0px;
+		bottom: 0;
+		background: radial-gradient(
+			46.08% 37.78% at 50.01% 49.53%,
+			#32e0c4 0%,
+			#36ae9b 100%
+		);
+		border: 2px solid #121212;
+		transform: rotate(-0.34deg);
+
+		p {
+			font-family: 'ReSquare';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 100%;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #000000;
+		}
+
+		&-bg {
+			position: absolute;
+
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 90px;
+			//left: -15px;
+			//right: -15px;
+			bottom: 50px;
+			padding-left: 150px;
+			background: radial-gradient(
+					46.08% 37.78% at 50.01% 49.53%,
+					#32e0c4 0%,
+					#36ae9b 100%
+				),
+				#32e0c4;
+			border: 2px solid #121212;
+			//transform: rotate(3.92deg);
+			transform: skewY(3deg);
+
+			p {
+				font-family: 'ReSquare';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 100%;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: #000000;
+				//	transform: skewY(-5deg);
+				transform: rotate(3deg);
+			}
+		}
+	}
+}

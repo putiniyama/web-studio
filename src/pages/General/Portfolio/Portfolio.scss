@@ -1,0 +1,194 @@
+@import '../../../styles/variables';
+
+.portfolio {
+	padding: 150px 0px;
+
+	&__description {
+		display: flex;
+	}
+
+	&__number {
+		margin-top: 72px;
+		font-family: 'Mr. Amazin';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 100px;
+		line-height: 100%; /* 100px */
+		text-transform: uppercase;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $main-color;
+	}
+
+	&__text {
+		width: 500px;
+		margin: 40px 0px 80px 0px;
+		font-family: 'Raleway';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 130%;
+		letter-spacing: 0.04em;
+		font-feature-settings: 'pnum' on, 'lnum' on;
+		color: $main-color;
+	}
+
+	&__blocks {
+		display: flex;
+		gap: 25px;
+		margin-left: 143px;
+	}
+
+	&__block {
+		width: 281px;
+		height: 437px;
+		box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.25);
+		border-radius: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		padding-bottom: 81px;
+		&:nth-child(1) {
+			background: url('/image/nonac.png') center no-repeat;
+		}
+		&:nth-child(2) {
+			background: url('/image/santi.png') center no-repeat;
+		}
+		&:nth-child(3) {
+			background: url('/image/niti.png') center no-repeat;
+		}
+
+		&-text {
+			font-family: 'Raleway';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 100%;
+			text-align: center;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #000000;
+		}
+	}
+
+	&__friends {
+		margin-top: 100px;
+
+		&-name {
+			font-family: 'Mr. Amazin';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 40px;
+			line-height: 36px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #000000;
+		}
+
+		&-descr {
+			max-width: 387px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			justify-content: center;
+		}
+
+		&-text {
+			font-family: 'Raleway';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			letter-spacing: 0.04em;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #000000;
+		}
+
+		&-skills {
+			font-family: 'Raleway';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			display: flex;
+			gap: 25px;
+			align-items: center;
+			letter-spacing: 0.04em;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #000000;
+
+			span {
+				&.active {
+					font-weight: 700;
+				}
+			}
+		}
+
+		&-wrapper {
+			margin-top: 64px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-items {
+			display: flex;
+			gap: 9px;
+		}
+
+		&-item {
+			cursor: pointer;
+			position: relative;
+			width: 165px;
+			height: 626px;
+			background: $main-color;
+			border-radius: 30px;
+			overflow: hidden;
+			transition: all 0.4s ease;
+
+			&.active {
+				width: 406px;
+			}
+
+			p {
+				padding: 0px 10px;
+				width: 217px;
+				height: 88px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				flex-wrap: wrap;
+				//background: #f1ffc9;
+				border-radius: 30px 30px 0px 0px;
+				transform: rotate(90deg);
+				font-family: 'ReSquare';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 100%;
+				text-align: center;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+				color: #000000;
+				left: -65px;
+				top: 137px;
+			}
+		}
+
+		&-items {
+			.portfolio__friends-item {
+				&:nth-child(1) {
+					p {
+						background: #f1ffc9;
+					}
+				}
+				&:nth-child(2) {
+					p {
+						background: #c9dbff;
+					}
+				}
+				&:nth-child(3) {
+					p {
+						background: #ffe3c9;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+@import '../../../styles/animate';
+
+.feedback {
+	height: auto;
+	padding-bottom: 102px;
+
+	.swiper {
+		margin-top: 68px;
+		padding-bottom: 34px;
+
+		&-slide {
+			padding: 10px;
+			// border-radius: 30px;
+		}
+	}
+
+	&__item {
+		border-radius: 30px;
+		background: #fff;
+		padding: 32px;
+		/* тень серая для плашек */
+		box-shadow: 5px 6px 20px 0px rgba(0, 0, 0, 0.25);
+		cursor: pointer;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 24px;
+	}
+	&__title {
+		color: #000;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Raleway;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 100%; /* 20px */
+	}
+
+	&__name {
+		color: #000;
+		font-variant-numeric: lining-nums proportional-nums;
+
+		/* Основа */
+		font-family: Raleway;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%; /* 20.8px */
+		letter-spacing: 0.64px;
+		max-width: 120px;
+	}
+
+	&__descr {
+		color: #000;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Raleway;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 130%; /* 20.8px */
+		letter-spacing: 0.64px;
+	}
+}

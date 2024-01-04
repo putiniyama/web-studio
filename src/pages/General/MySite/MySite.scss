@@ -1,0 +1,115 @@
+@import '../../../styles/variables';
+@import '../../../styles/animate';
+
+.my-site {
+	background-color: $main-color;
+	padding-top: 100px;
+	padding-bottom: 264px;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__items {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 260px;
+
+		p {
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 100%;
+			text-align: center;
+
+			&:nth-child(1) {
+				font-family: 'ReSquare';
+				font-size: 120px;
+				text-transform: uppercase;
+				color: $sub-color;
+			}
+			&:nth-child(2) {
+				margin-top: 24px;
+				font-family: 'Raleway';
+				font-size: 24px;
+				color: #ffffff;
+			}
+		}
+	}
+
+	&__descriptions {
+		position: relative;
+		display: flex;
+		justify-content: end;
+		width: 100%;
+	}
+
+	&__image {
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 64px;
+			right: -77px;
+		}
+	}
+
+	&__creating {
+		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		max-width: 550px;
+		position: relative;
+
+		&-title {
+			font-family: 'ReSquare';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 36px;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #ffffff;
+			margin-bottom: 16px;
+		}
+
+		&-text {
+			&-item {
+				display: flex;
+				align-items: center;
+				padding-left: 28px;
+				&::before {
+					position: absolute;
+					content: '';
+					left: 0;
+					width: 6px;
+					height: 6px;
+					background-color: $main-color;
+					border: 4px solid $sub-color;
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		p:not(:nth-child(1)) {
+			max-width: 486px;
+			margin-top: 16px;
+			font-family: 'Raleway';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			letter-spacing: 0.04em;
+			font-feature-settings: 'pnum' on, 'lnum' on;
+			color: #ffffff;
+		}
+	}
+}

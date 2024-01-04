@@ -1,0 +1,49 @@
+@import '../../styles/variables';
+@import '../../styles/animate';
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px 40px;
+	gap: 10px;
+	height: auto;
+	background: $main-color;
+	border: 5px solid #ffffff;
+	border-radius: 10px;
+	cursor: pointer;
+
+	font-family: 'Mr. Amazin';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 100%;
+	text-transform: uppercase;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #ffffff;
+
+	&__create-it {
+		margin-top: 72px;
+
+		animation: slideTop 1s ease forwards;
+	}
+
+	&:hover {
+		color: $sub-color;
+		transition: 0.2s ease-in-out;
+		border: 5px solid $sub-color;
+		box-shadow: 6px 6px 20px rgba(50, 224, 196, 0.25);
+		text-shadow: 0 0 10px $sub-color;
+	}
+
+	&:active {
+		background: #32e0c4;
+		color: #121212;
+	}
+
+	&__white {
+		background: #ffffff;
+		border: 5px solid #121212;
+		color: #121212;
+	}
+}

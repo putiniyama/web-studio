@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+@import '../../styles/fonts';
+
+.title {
+	font-family: 'Mr. Amazin';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 100%;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: $main-color;
+	width: fit-content;
+
+	&_center {
+		margin: 0 auto;
+		//text-align: center;
+	}
+
+	&_white {
+		color: $text-color;
+	}
+}

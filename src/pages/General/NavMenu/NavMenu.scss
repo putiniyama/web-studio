@@ -1,0 +1,86 @@
+@import '../../../styles/variables';
+
+.header {
+	background-color: $main-color;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 28px 0px;
+	}
+}
+
+.menu {
+	&__items {
+		display: inline-block;
+		padding: 0px 40px;
+		color: #ffffff;
+		text-decoration: none;
+		// position: relative;
+		font-weight: 300;
+		opacity: 0;
+		animation: slideTop 0.5s ease forwards;
+		animation-delay: calc(0.2s * var(--i));
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			width: 0%;
+			left: 20%;
+			border-radius: 100px 100px 0px 0px;
+			background-color: $sub-color;
+			height: 5px;
+		}
+
+		&:hover {
+			color: $sub-color;
+			transition: all 0.5s;
+
+			&::after {
+				width: 60%;
+				// right: 60%;
+				transition: all 0.5s;
+			}
+		}
+
+		&.active {
+			color: $sub-color;
+			transition: all 0.5s;
+
+			&::after {
+				width: 60%;
+				// right: 60%;
+				transition: all 0.5s;
+			}
+		}
+	}
+}
+
+.i-1 {
+	--i: 1;
+}
+
+.i-2 {
+	--i: 2;
+}
+
+.i-3 {
+	--i: 3;
+}
+
+.i-4 {
+	--i: 4;
+}
+
+@keyframes slideTop {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

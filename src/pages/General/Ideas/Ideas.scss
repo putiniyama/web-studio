@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+
+.ideas {
+	position: relative;
+	background: linear-gradient(
+			101deg,
+			#121212 49.83%,
+			rgba(18, 18, 18, 0.6) 99.16%
+		),
+		url('/image/st.png'),
+		linear-gradient(101deg, #121212 37.83%, rgba(18, 18, 18, 0.9) 99.16%);
+
+	background-repeat: no-repeat, repeat, no-repeat;
+	background-size: 100% 100%, 60% 60%, 100% 100%;
+	background-position: center center, center center;
+	overflow: hidden;
+	padding: 100px 0 120px 0;
+
+	&__wrapper {
+		max-width: 669px;
+	}
+
+	&__photo {
+		position: absolute;
+		right: -150px;
+		top: -150px;
+		transform: rotate(45deg);
+	}
+}

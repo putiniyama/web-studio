@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  # Сервер
+  server:
+    build: .
+    ports:
+      - '3000:3000'
+    command: ['node', 'server.js']
+
+  # React-приложение
+  web:
+    build: .
+    ports:
+      - '8080:80'
+    depends_on:
+      - server
