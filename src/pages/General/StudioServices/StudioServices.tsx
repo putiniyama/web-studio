@@ -5,7 +5,7 @@ const StudioServices = () => {
 		<section className='studio-services'>
 			<div className='container'>
 				<div className='studio-services__wrapper'>
-					<Title text='наш услуги' addClass='title_center'></Title>
+					<Title text='наши услуги' addClass='title_center title_small'></Title>
 					<div className='studio-services__items'>
 						<div className='studio-services__item'>
 							<img

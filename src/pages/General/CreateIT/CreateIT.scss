@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 @import '../../../styles/animate';
 
-.create-it {
+.create {
 	position: relative;
 	//background: url('image/lines.png') center/contain repeat;
 	// linear-gradient(90deg, #121212 50%, rgba(18, 18, 18, 0) 99.95%), $main-color;
@@ -9,6 +9,7 @@
 	background-color: $main-color;
 	background-blend-mode: screen;
 	padding: 120px 0 100px 0;
+	overflow: hidden;
 
 	&__title {
 		margin-bottom: 40px;
@@ -17,16 +18,18 @@
 
 	&__text {
 		margin-top: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 		p {
-			font-family: 'ReSquare';
-			font-weight: 700;
-			font-size: 26px;
-			line-height: 133.5%;
+			color: #fff;
+			font-variant-numeric: lining-nums proportional-nums;
+			font-family: 'Mr. Amazin';
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 133.5%; /* 32.04px */
 			text-transform: uppercase;
-			font-feature-settings: 'pnum' on, 'lnum' on;
-			color: #ffffff;
-			display: flex;
-			align-items: center;
 		}
 
 		span {
@@ -46,7 +49,25 @@
 	}
 
 	&__sub {
+		margin: 40px 0 72px 0;
 		animation: slideLeft 1s ease forwards;
+		color: #e6e6e6;
+		font-family: 'Mr. Amazin';
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 100%; /* 32px */
+		text-transform: uppercase;
+
+		span {
+			font-family: 'Mr. Amazin';
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 100%; /* 32px */
+			text-transform: uppercase;
+			color: #32e0c4;
+		}
 	}
 
 	&__description {

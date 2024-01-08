@@ -32,7 +32,7 @@ const Portfolio = () => {
 				<div className='portfolio__wrapper'>
 					<div className='portfolio__description'>
 						<div className='portfolio__description-left'>
-							<h2 className='title'>портфолио</h2>
+							<h2 className='title title_small'>портфолио</h2>
 							<p className='portfolio__number'>353</p>
 							<p className='portfolio__text'>
 								наших партнёра увеличили продажи и рекомендуют нас
@@ -56,7 +56,7 @@ const Portfolio = () => {
 						</div>
 					</div>
 					<div className='portfolio__friends'>
-						<h2 className='portfolio__title'>наша команда</h2>
+						<h2 className='title title_center title_small'>наша команда</h2>
 						<div className='portfolio__friends-wrapper'>
 							<div className='portfolio__friends-descr'>
 								<h2 className='portfolio__friends-name'>

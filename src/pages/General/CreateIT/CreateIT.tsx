@@ -1,6 +1,6 @@
-import Button from '../../../components/Button/Button'
-import Typed from 'typed.js'
 import { useEffect, useRef } from 'react'
+import Typed from 'typed.js'
+import Button from '../../../components/Button/Button'
 import Title from '../../../components/Title/Title'
 
 const CreateIT = () => {
@@ -22,25 +22,25 @@ const CreateIT = () => {
 	}, [])
 
 	return (
-		<section className='create-it'>
+		<section className='create'>
 			<div className='container'>
-				<div className='create-it__wrapper'>
-					<div className='create-it__description'>
+				<div className='create__wrapper'>
+					<div className='create__description'>
 						<Title
 							text='создаем и продвигаем'
 							addClass='title_left title_white'
 						></Title>
-						<h2 className='subtitle create-it__sub'>
+						<h2 className='create__sub'>
 							ваши{' '}
 							<span ref={el} className='it'>
 								it продукты
 							</span>
 						</h2>
-						<Button title='обсудить проект' addClassName='create-it' />
-						<h2 className='subtitle subtitle__create-it'>
+						<Button title='обсудить проект' addClassName='create' />
+						<h2 className='subtitle subtitle__create'>
 							веб-студия анатолия усова
 						</h2>
-						<div className='create-it__text'>
+						<div className='create__text'>
 							<p>разрабатываем техничкески сложные</p>
 							<p>
 								<span></span>сайты и веб-сервисы<span></span>
@@ -48,7 +48,7 @@ const CreateIT = () => {
 							<p>для любых бизнес-задач</p>
 						</div>
 					</div>
-					<div className='create-it__image'>
+					<div className='create__image'>
 						<img src='image/Obsidian.png' alt='obsidian' />
 					</div>
 				</div>

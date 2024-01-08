@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css/bundle'
 
-import './FeedbackSwiper.scss'
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import Title from '../../../components/Title/Title'
 import { feedbacks } from '../../../constants/Constants'
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import './FeedbackSwiper.scss'
 
 const FeedbackSwiper = () => {
 	// const breakpoints = {
@@ -25,7 +25,7 @@ const FeedbackSwiper = () => {
 		<section className='feedback'>
 			<div className='container'>
 				<div className='feedback__wrapper'>
-					<Title text={'Отзывы'}></Title>
+					<Title text={'Отзывы'} addClass={'title_small title_center'} />
 					<Swiper
 						modules={[Navigation, Pagination, Scrollbar, A11y]}
 						// breakpoints={breakpoints}

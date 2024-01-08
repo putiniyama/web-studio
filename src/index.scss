@@ -11,14 +11,17 @@
 	margin: 0 auto;
 }
 
+body {
+}
+
 @import 'pages/General/NavMenu/NavMenu';
-@import 'pages/General/CreateIT/CreateIT';
 @import 'pages/General/Platform/Platform';
 @import 'pages/General/MySite/MySite';
 @import 'pages/General/StudioServices/StudioServices';
 @import 'pages/General/Steps/Steps';
 @import 'pages/General/Portfolio/Portfolio';
 @import 'pages/General/Ideas/Ideas';
+@import 'pages/General/CreateIT/CreateIT';
 
 @import 'components/Button/Button';
 @import 'components/Form/Form';
@@ -26,6 +29,27 @@
 @import 'styles/variables';
 @import 'styles/fonts';
 @import 'styles/animate';
+
+/* Уменьшение ширины полосы прокрутки */
+::-webkit-scrollbar {
+	width: 8px; /* Ширина полосы */
+}
+
+/* Уменьшение высоты полосы прокрутки (для горизонтальной прокрутки) */
+::-webkit-scrollbar {
+	height: 8px; /* Высота полосы */
+}
+
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar-thumb {
+	background-color: #32e0c4; /* Цвет полосы */
+	border-radius: 4px; /* Закругленные углы */
+}
+
+/* Стилизация трека (фона) полосы прокрутки */
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1; /* Цвет фона */
+}
 
 .logo {
 	font-family: 'Lovelo', sans-serif;
@@ -39,6 +63,10 @@
 	color: #ffffff;
 
 	animation: slideRight 1s ease forwards;
+
+	&__footer {
+		color: #121212;
+	}
 }
 
 .phone {
@@ -61,15 +89,15 @@
 	}
 }
 
-.title {
-	font-family: 'ReSquare';
-	font-weight: 700;
-	font-size: 96px;
-	line-height: 72px;
-	text-transform: uppercase;
-	font-feature-settings: 'pnum' on, 'lnum' on;
-	color: $text-color;
-}
+// .title {
+// 	font-family: 'ReSquare';
+// 	font-weight: 700;
+// 	font-size: 96px;
+// 	line-height: 72px;
+// 	text-transform: uppercase;
+// 	font-feature-settings: 'pnum' on, 'lnum' on;
+// 	color: $text-color;
+// }
 
 .subtitle {
 	font-family: 'ReSquare';
@@ -81,15 +109,15 @@
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	color: $text-color;
 
-	&__create-it {
+	&__create {
 		margin-top: 100px;
-		font-size: 48px;
+		font-family: 'Mr. Amazin';
+		font-size: 32px;
 		line-height: 100%;
-		letter-spacing: 0.06em;
+		letter-spacing: 4.48px;
 		font-feature-settings: 'pnum' on, 'lnum' on;
 		color: #121212;
-		// border: 1px solid #ffffff;
-		animation: slideTop 1s ease forwards;
+		text-transform: uppercase;
 		text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
 			1px 1px 0 #ffffff;
 	}
@@ -101,14 +129,16 @@
 }
 
 .name-block {
-	font-family: 'ReSquare';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 48px;
-	line-height: 36px;
+	color: #121212;
 	text-align: center;
-	font-feature-settings: 'pnum' on, 'lnum' on;
-	color: $main-color;
+	font-variant-numeric: lining-nums proportional-nums;
+
+	/* Подзаголовок */
+	font-family: 'Mr. Amazin';
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
 
 .bbbb {

@@ -2,7 +2,7 @@
 
 .header {
 	background-color: $main-color;
-
+	overflow: hidden;
 	&__wrapper {
 		display: flex;
 		align-items: center;

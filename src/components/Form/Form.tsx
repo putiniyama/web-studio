@@ -1,7 +1,6 @@
-import { useForm, SubmitHandler } from 'react-hook-form'
-import Button from '../Button/Button'
 import { useEffect } from 'react'
-import InputMask from 'react-input-mask'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import Button from '../Button/Button'
 
 type Inputs = {
 	name: string
@@ -16,13 +15,14 @@ const Form = () => {
 
 	useEffect(() => {
 		if (formState.isSubmitSuccessful) {
-			reset({ phone: '' })
+			reset()
 		}
 	}, [formState, reset])
 
 	const onSubmit: SubmitHandler<Inputs> = data => {
 		console.log(data)
-		reset()
+
+		reset({ name: '', phone: '', mail: '' })
 	}
 
 	// console.log(watch('example')) // watch input value by passing the name of it
@@ -43,12 +43,13 @@ const Form = () => {
 				/>
 				{formState.errors.name && (
 					<span>
-						{formState.errors?.name?.message || 'Неверо введено имя!'}
+						{formState.errors.name?.message || 'Неверно введено имя!'}
 					</span>
 				)}
 			</div>
 			<div className='input__wrapper'>
-				<InputMask
+				{/* <InputMask */}
+				<input
 					{...register('phone', {
 						required: 'Поле обязательно к заполнению!',
 						pattern: /^\+?[0-9\s\-\\(\\)]+$/,
@@ -62,25 +63,29 @@ const Form = () => {
 							message: 'Максимум 20 символов!',
 						},
 					})}
-					mask='+7 (999) 999-99-99'
+					/* mask='+7 (999) 999-99-99' */
 					placeholder='ТЕЛЕФОН'
 				/>
 				{formState.errors.phone && (
 					<span>
-						{formState.errors?.phone?.message ||
-							'Неверо введен номер телефона!'}
+						{formState.errors.phone?.message ||
+							'Неверно введен номер телефона!'}
 					</span>
 				)}
 			</div>
 			<div className='input__wrapper'>
 				<input
 					{...register('mail', {
-						required: true,
+						required: 'Поле обязательно к заполнению!',
 						pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 					})}
 					placeholder='Email'
 				/>
-				{formState.errors.mail && <span>Неверо введен email!</span>}
+				{formState.errors.mail && (
+					<span>
+						{formState.errors.mail?.message || 'Неверно введен email!'}
+					</span>
+				)}
 			</div>
 
 			<Button title='Оставить заявку'></Button>

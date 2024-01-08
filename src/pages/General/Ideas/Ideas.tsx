@@ -1,5 +1,5 @@
-import Title from '../../../components/Title/Title'
 import Form from '../../../components/Form/Form'
+import Title from '../../../components/Title/Title'
 
 const Ideas = () => {
 	return (
@@ -8,8 +8,8 @@ const Ideas = () => {
 			<div className='container'>
 				<div className='ideas__wrapper'>
 					<Title
-						text='Поможем реализовать ваши идеи'
-						addClass='title_white'
+						text='Поможем реализовать ваши идеи'
+						addClass='title_white title_small'
 					></Title>
 					<Form></Form>
 				</div>

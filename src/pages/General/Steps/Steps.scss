@@ -5,7 +5,7 @@
 	background-color: $main-color;
 	position: relative;
 	//padding-bottom: 707px;
-	// overflow: hidden;
+	overflow: hidden;
 
 	&__wrapper {
 		position: relative;
@@ -228,11 +228,12 @@
 		transform: rotate(-0.34deg);
 
 		p {
-			font-family: 'ReSquare';
+			/* для бегущей строки */
+			font-family: 'Mr. Amazin';
+			font-size: 24px;
 			font-style: normal;
-			font-weight: 700;
-			font-size: 30px;
-			line-height: 100%;
+			font-weight: 400;
+			line-height: normal;
 			font-feature-settings: 'pnum' on, 'lnum' on;
 			color: #000000;
 		}
@@ -259,15 +260,16 @@
 			transform: skewY(3deg);
 
 			p {
-				font-family: 'ReSquare';
+				/* для бегущей строки */
+				font-family: 'Mr. Amazin';
+				font-size: 24px;
 				font-style: normal;
-				font-weight: 700;
-				font-size: 30px;
-				line-height: 100%;
+				font-weight: 400;
+				line-height: normal;
 				font-feature-settings: 'pnum' on, 'lnum' on;
 				color: #000000;
 				//	transform: skewY(-5deg);
-				transform: rotate(3deg);
+				transform: rotate(0deg);
 			}
 		}
 	}
